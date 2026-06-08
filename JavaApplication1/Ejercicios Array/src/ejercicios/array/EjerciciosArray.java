@@ -46,6 +46,8 @@ public class EjerciciosArray {
             System.out.println("No hay numeros negativos.");
         
         
+        
+        
        //EJERCICIO 2
   int[] numeros = new int[10];
  
@@ -159,40 +161,10 @@ int[] numeros = new int[10];
             System.out.println("No se ingresaron valores negativos.");
 
 
-            //EJERCICIO 7
- int[] numeros = new int[10];
- 
-        System.out.println("Ingrese 10 números enteros:");
-        for (int i = 0; i < 10; i++) {
-            System.out.print("Número " + (i + 1) + ": ");
-            numeros[i] = sc.nextInt();
-        }
- 
-        double sumaPos = 0, sumaNeg = 0;
-        int contPos = 0, contNeg = 0;
- 
-        for (int n : numeros) {
-            if (n > 0) {
-                sumaPos += n;
-                contPos++;
-            } else if (n < 0) {
-                sumaNeg += n;
-                contNeg++;
-            }
-        }
- 
-        System.out.println("\n--- Resultados ---");
-        if (contPos > 0)
-            System.out.printf("Media de valores positivos: %.2f%n", sumaPos / contPos);
-        else
-            System.out.println("No se ingresaron valores positivos.");
- 
-        if (contNeg > 0)
-            System.out.printf("Media de valores negativos: %.2f%n", sumaNeg / contNeg);
-        else
-            System.out.println("No se ingresaron valores negativos.");
          
-         //EJERCICIO 8
+
+         
+         //EJERCICIO 7
  String[] nombres = new String[20];
         double[] sueldos = new double[20];
  
@@ -216,33 +188,23 @@ int[] numeros = new int[10];
         System.out.println("Nombre: " + nombres[indiceMayor]);
         System.out.printf("Sueldo: %.2f%n", sueldos[indiceMayor]);
  */
-        //EJERCICIO 9
-  
-       
-
+        //EJERCICIO 8
         int desde = 1;
-
         int hasta = 10;
-
         int tamaño = 5;
-
         int[] resultado = generarArraySinRepetidos(desde, hasta, tamaño);
-
         for (int num : resultado) {
 
             System.out.print(num + " ");
-
-        }
-
-        }
+}
+}
 
         public static int[] generarArraySinRepetidos(int desde, int hasta, int tamaño) {
 
         if (tamaño > (hasta - desde + 1)) {
 
             throw new IllegalArgumentException("No se pueden generar tantos números sin repetir en ese rango");
-
-        }
+}
 
         int[] array = new int[tamaño];
 
@@ -259,32 +221,19 @@ int[] numeros = new int[10];
                 array[i] = numAleatorio;
 
                 i++;
-
-            }
-
-        }
-
+}
+}
         return array;
-
-        }
+}
 
         public static boolean comprobarSiContiene(int[] array, int posicionActual, int numero) {
 
         for (int i = 0; i < posicionActual; i++) {
 
             if (array[i] == numero) {
-
-                return true;
-
-            }
-
-        }
-
-        return false;
-        
-
-
-
-    }
-    
+return true;
+ }
+ }
+ return false;
+}
 }
